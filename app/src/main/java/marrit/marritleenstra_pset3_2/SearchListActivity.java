@@ -13,9 +13,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SearchListActivity extends AppCompatActivity {
+    // declare vies
     TextView mTextViewResult;
     ListView mListViewItems;
 
+    // declare variables
     ArrayList<String> songsFound;
 
     @Override
@@ -41,38 +43,3 @@ public class SearchListActivity extends AppCompatActivity {
     }
 
 }
-    /*// declare variables
-    private ArrayList<String> mSearchedSongs = new ArrayList<String>();
-    private SongSearchAdapter mSongSearchAdapter;
-
-    // add static strings for key-value pairs
-    public static final String EXTRA_SONG_ID = "marrit.marritleenstra_pset31.SongId";
-
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_search_list);
-
-
-        mSearchedSongs = new ArrayList<String>();
-
-        Bundle extras = getIntent().getExtras();
-        mSearchedSongs = (ArrayList<String>) extras.getSerializable("data");
-
-        //populate list for testing purposes
-        *//*for (int i = 0; i < 10; i++) {
-            Song song = new Song();
-            song.setTitle("Song #" + i);
-            song.setArtist("Artist #" + i);
-            mSearchedSongs.add(song);
-        }*//*
-
-        // instantiate the SongAdapter class
-        mSongSearchAdapter = new SongSearchAdapter(this, R.layout.searched_list_item, mSearchedSongs);
-        setListAdapter(mSongSearchAdapter);
-
-        ListView lv = getListView();
-    }
-
-}
-
-*/

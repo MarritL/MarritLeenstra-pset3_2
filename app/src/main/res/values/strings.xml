@@ -10,4 +10,5 @@
     <string name="search_track">Search track</string>
     <string name="search">Search</string>
     <string name="tracks_found">Search Results</string>
+    <string name="to_listen">Your To-Listen List</string>
 </resources>

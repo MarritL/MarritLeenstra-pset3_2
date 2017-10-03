@@ -17,13 +17,10 @@ public class SearchActivity extends AppCompatActivity {
     Button mSearchArtistButton;
     Button mSearchTrackButton;
 
-    private static final String TAG = "ERRORTAG";
-
     @Override
     protected void  onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
-        Log.i(TAG,"created searchActivity");
 
         //initialise EditText fields
         mSearchArtist = (EditText) findViewById(R.id.search_artist);
@@ -43,9 +40,7 @@ public class SearchActivity extends AppCompatActivity {
     public void trackSearch(View view) {
         String trackSearch = mSearchTrack.getText().toString();
         TrackAsyncTask asyncTask = new TrackAsyncTask(this);
-        Log.d(TAG, "calling asyncTask.execute()");
         asyncTask.execute(trackSearch);
-        Log.d(TAG, "after asyncTask.execute(trackSearch)");
 
         mSearchTrack.getText().clear();
     }
@@ -62,7 +57,6 @@ public class SearchActivity extends AppCompatActivity {
         public void onClick(View view) {
             if (view == mSearchTrackButton) {
                 trackSearch(view);
-                Log.d(TAG,"after trackSearch(View)");
             }
             else {
 
